@@ -1,0 +1,18 @@
+gedit ~/.bashrc
+export PATH=${PATH}:/home/mannir/android-sdk-linux/tools
+export PATH=${PATH}:/home/mannir/android-sdk-linux/platform-tools
+export ANDROID_SDK_HOME ={PATH}:/opt/android/sdk
+
+android create project --target 1 --name Tracking --path ./Tracking --activity MainActivity --package com.mma.tracking
+android update project --name Tracking --target 8 --path .
+cd Tracking
+ant debug
+adb install bin/Tracking-debug.apk
+android avd
+
+
+git add .
+git commit -m "Initalized Source files"
+git push
+
+keytool -list -v -keystore ~/.android/debug.keystore -alias androiddebugkey -storepass android -keypass android
