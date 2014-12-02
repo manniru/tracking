@@ -12,7 +12,7 @@
    } else {
       echo "Opened database successfully\n";
    }
-
+/**
    $sql =<<<EOF
       CREATE TABLE TRACKS
       (ID INT PRIMARY KEY ,MOBILENO TEXT, LAT TEXT, LON TEXT);
@@ -24,7 +24,7 @@ EOF;
    } else {
      /// echo "Table created successfully\n";
    }
-
+*/
 
 if(isset($_REQUEST['mobileno'])) {
 	// date("Y-m-d h:i:sa")
